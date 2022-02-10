@@ -53,6 +53,11 @@ input[type='submit'] {
   font-size: 15px;
 }
 
+button:hover,
+input[type='submit']:hover {
+  background-color: #cf534a;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
