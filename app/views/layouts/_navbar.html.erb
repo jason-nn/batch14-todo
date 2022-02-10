@@ -4,10 +4,14 @@
       <%= image_tag("logo.svg") %>
       <%= link_to 'Potion', root_path %>
     </div>
-    <%= link_to 'All tasks', root_path, class: 'navlink' %>
-    <%= link_to "Today's tasks", root_path, class: 'navlink' %>
+    <% if user_signed_in? %>
+      <%= link_to 'All tasks', root_path, class: 'navlink' %>
+      <%= link_to "Today's tasks", root_path, class: 'navlink' %>
+    <% end %>
   </div>
   <div class="navbar-right">
-    <%= button_to "Log out", root_path %>
+    <% if user_signed_in? %>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: 'button-red' %>
+    <% end %>
   </div>
 </div>
