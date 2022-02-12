@@ -1,0 +1,10 @@
+<div class="categories-container">
+  <% @categories.each do |category| %>
+    <%= render 'today', category: category %>
+  <% end %>
+  <div class="new-category-button-container">
+    <%= link_to new_category_path do %>
+      <div class="button-blue new-category-button-container-button">􀅼</div>
+    <% end %>
+  </div>
+</div>

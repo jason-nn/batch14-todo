@@ -30,6 +30,10 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def today
+    @categories = current_user.categories.order(:id)
+  end
+
   def destroy
     @category.destroy
 

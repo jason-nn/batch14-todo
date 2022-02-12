@@ -8,7 +8,7 @@
     <% end %>
     <% if user_signed_in? %>
       <%= link_to 'All tasks', root_path, class: 'gray-hover' %>
-      <%= link_to "Due today", root_path, class: 'gray-hover' %>
+      <%= link_to "Due today", today_path, class: 'gray-hover' %>
     <% end %>
   </div>
   <div class="navbar-right">

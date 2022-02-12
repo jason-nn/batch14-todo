@@ -1,4 +1,4 @@
-<% tasks = category.tasks %>
+<% tasks = category.tasks.where(deadline: Date.today) %>
 <div class="category-container">
   <div class="category-header">
     <div class="category-name">
