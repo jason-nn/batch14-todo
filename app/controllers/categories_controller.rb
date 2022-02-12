@@ -1,9 +1,13 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_show_all
   before_action :set_category, only: %i[edit update destroy]
 
   def index
     @categories = current_user.categories.order(:id)
+
+    $show_all = true
+    set_show_all
   end
 
   def new
@@ -38,6 +42,9 @@ class CategoriesController < ApplicationController
 
   def today
     @categories = current_user.categories.order(:id)
+
+    $show_all = false
+    set_show_all
   end
 
   private
@@ -48,5 +55,9 @@ class CategoriesController < ApplicationController
 
   def set_category
     @category = current_user.categories.find(params[:id])
+  end
+
+  def set_show_all
+    @show_all = $show_all
   end
 end

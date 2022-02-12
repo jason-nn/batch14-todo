@@ -1,0 +1,15 @@
+<div>
+  <% if @show_all %>
+    <div class="header">All tasks</div>
+  <% else %>
+    <div class="header">Due today</div>
+  <% end %>
+  <div class="categories-container">
+    <%= render @categories %>
+    <div class="new-category-button-container">
+      <%= link_to new_category_path do %>
+        <div class="button-blue new-category-button-container-button">􀅼</div>
+      <% end %>
+    </div>
+  </div>
+</div>
