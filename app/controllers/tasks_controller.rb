@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_category, only: %i[new create show destroy]
-  before_action :set_task, only: %i[show destroy]
+  before_action :set_category, only: %i[new create show destroy edit update]
+  before_action :set_task, only: %i[show destroy edit update]
 
   def new
     @task = @category.tasks.new
@@ -23,6 +23,17 @@ class TasksController < ApplicationController
     @task.destroy
 
     redirect_to categories_path, notice: 'Deleted task'
+  end
+
+  def edit; end
+
+  def update
+    if @task.update(task_params)
+      redirect_to category_task_path(@task.category_id, @task.id),
+                  notice: 'Updated category'
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
