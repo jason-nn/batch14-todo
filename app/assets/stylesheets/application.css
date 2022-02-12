@@ -25,7 +25,7 @@
 }
 
 ::selection {
-  background-color: hsl(197, 71%, 52%, 30%);
+  background-color: hsl(197, 71%, 90%);
 }
 
 input:-webkit-autofill {
@@ -63,7 +63,7 @@ select {
   margin-bottom: 20px;
 
   background-color: white;
-  border: 1px solid hsl(240, 3%, 12%, 15%);
+  border: 1px solid hsl(197, 71%, 90%);
   border-radius: 4px;
 }
 
@@ -397,7 +397,7 @@ pre {
   font-size: 15px;
   display: inline-block;
 
-  background-color: hsl(197, 71%, 52%, 30%);
+  background-color: hsl(197, 71%, 90%);
   padding: 0.25em 0.5em;
   border-radius: 4px;
 }
@@ -550,7 +550,7 @@ pre {
 }
 
 .task-container:hover {
-  background-color: hsl(197, 71%, 52%, 5%);
+  background-color: hsl(197, 71%, 95%);
 }
 
 .task-name {
