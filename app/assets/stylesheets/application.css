@@ -140,7 +140,7 @@ pre {
   color: white;
   background-color: #e16259;
   border: 1px solid #be5643;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 
   cursor: pointer;
 
@@ -163,7 +163,7 @@ pre {
   color: white;
   background-color: #2eaadc;
   border: 1px solid #4b96c0;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 
   cursor: pointer;
 
@@ -240,7 +240,7 @@ pre {
 .gray-hover:hover {
   background-color: #f5f5f7;
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 }
 
 .white-hover {
@@ -250,7 +250,7 @@ pre {
 .white-hover:hover {
   background-color: white;
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 }
 
 .toast {
@@ -262,7 +262,7 @@ pre {
   padding: 1em 1.5em;
 
   color: white;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 
   font-family: SF-Pro-Display-Semibold;
   font-size: 15px;
@@ -342,7 +342,7 @@ pre {
   background-color: white;
   padding: 30px;
   border-radius: 6px;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 }
 
 .header {
@@ -495,7 +495,7 @@ pre {
   color: white;
   background-color: #2eaadc;
   border: 1px solid #4b96c0;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 
   cursor: pointer;
 
@@ -539,7 +539,7 @@ pre {
   background-color: white;
   padding: 1em 1.5em;
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+  box-shadow: 0 1px 2px rgb(15, 15, 15, 10%);
 
   font-family: SF-Pro-Display-Regular;
   font-size: 15px;
