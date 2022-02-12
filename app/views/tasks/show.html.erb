@@ -1,6 +1,12 @@
 <div class="category-form-container">
-  <%= link_to url_for(:back) do %>
-    <div class="back-link white-hover">􀰪</div>
+  <% if @show_all %>
+    <%= link_to categories_path do %>
+      <div class="back-link white-hover">􀰪</div>
+    <% end %>
+  <% else %>
+    <%= link_to today_path do %>
+      <div class="back-link white-hover">􀰪</div>
+    <% end %>
   <% end %>
   <div class="box category-form">
     <div class="category-name">

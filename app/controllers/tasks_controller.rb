@@ -12,7 +12,11 @@ class TasksController < ApplicationController
     @task = @category.tasks.new(task_params)
 
     if @task.save
-      redirect_to categories_path, notice: 'Created new task'
+      if @show_all
+        redirect_to categories_path, notice: 'Created new task'
+      else
+        redirect_to today_path, notice: 'Created new task'
+      end
     else
       render :new, status: :unprocessable_entity
     end
@@ -34,7 +38,11 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
 
-    redirect_to categories_path, notice: 'Deleted task'
+    if @show_all
+      redirect_to categories_path, notice: 'Deleted task'
+    else
+      redirect_to today_path, notice: 'Deleted task'
+    end
   end
 
   private

@@ -22,7 +22,11 @@ class CategoriesController < ApplicationController
     @category = current_user.categories.new(category_params)
 
     if @category.save
-      redirect_to categories_path, notice: 'Created new category'
+      if @show_all
+        redirect_to categories_path, notice: 'Created new category'
+      else
+        redirect_to today_path, notice: 'Created new category'
+      end
     else
       render :new, status: :unprocessable_entity
     end
@@ -32,7 +36,11 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      redirect_to categories_path, notice: 'Updated category'
+      if @show_all
+        redirect_to categories_path, notice: 'Updated category'
+      else
+        redirect_to today_path, notice: 'Updated category'
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -41,7 +49,13 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
 
-    redirect_to categories_path, status: :see_other, notice: 'Deleted category'
+    if @show_all
+      redirect_to categories_path,
+                  status: :see_other,
+                  notice: 'Deleted category'
+    else
+      redirect_to today_path, status: :see_other, notice: 'Deleted category'
+    end
   end
 
   private
