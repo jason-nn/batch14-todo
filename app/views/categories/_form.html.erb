@@ -3,7 +3,7 @@
     <div>
       <%= form.label :name %>
       <div class="input-container">
-        <%= form.text_field :name %>
+        <%= form.text_field :name, autofocus: true %>
         <% category.errors.full_messages_for(:name).each do |message| %>
           <div class="error">
             <%= message %>
