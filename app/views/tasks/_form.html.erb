@@ -1,0 +1,48 @@
+<div class="category-form-container">
+  <%= link_to categories_path do %>
+    <div class="back-link white-hover">􀰪</div>
+  <% end %>
+  <div class="box category-form">
+    <div class="header">
+      <%= header %>
+    </div>
+    <%= form_with model: [category, category.tasks.build] do |form| %>
+      <div>
+        <%= form.label :name %>
+        <div class="input-container">
+          <%= form.text_field :name, autofocus: true %>
+          <% category.errors.full_messages_for(:name).each do |message| %>
+            <div class="error">
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div>
+        <%= form.label :details %>
+        <div class="input-container">
+          <%= form.text_area :details, autofocus: false, size:"70x5" %>
+          <% category.errors.full_messages_for(:details).each do |message| %>
+            <div class="error">
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div>
+        <%= form.label :deadline %>
+        <div class="input-container">
+          <%= form.date_select :deadline, autofocus: false, order: [:month, :day, :year] %>
+          <% category.errors.full_messages_for(:deadline).each do |message| %>
+            <div class="error">
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div>
+        <%= form.submit button_text %>
+      </div>
+    <% end %>
+  </div>
+</div>

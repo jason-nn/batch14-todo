@@ -4,14 +4,21 @@
       <%= category.name %>
     </div>
     <div class="category-header-actions">
-      <span>
-        <%= link_to '􀈊', edit_category_path(category) %>
-      </span>
-      <span>
-        <%= link_to "􀈑", category_path(category),
+      <%= link_to edit_category_path(category) do %>
+        <span>􀈊</span>
+      <% end %>
+      <%= link_to category_path(category),
                   method: :delete,
-                  data: { confirm: "Are you sure you want to delete this category?" } %>
-      </span>
+                  data: { confirm: "Are you sure you want to delete this category?" } do %>
+        <span>􀈑</span>
+      <% end %>
     </div>
+  </div>
+  <div class="new-task-container">
+    <%= link_to new_category_task_path(category) do %>
+      <div class="white-hover new-task">
+        􀅼 New task
+      </div>
+    <% end %>
   </div>
 </div>

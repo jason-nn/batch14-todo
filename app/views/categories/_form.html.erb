@@ -1,7 +1,7 @@
 <div class="category-form-container">
-  <div class="back-link">
-    <%= link_to '􀰪', categories_path, class: 'white-hover' %>
-  </div>
+  <%= link_to categories_path do %>
+    <div class="back-link white-hover">􀰪</div>
+  <% end %>
   <div class="box category-form">
     <div class="header">
       <%= header %>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div>
-        <%= form.submit %>
+        <%= form.submit button_text %>
       </div>
     <% end %>
   </div>
