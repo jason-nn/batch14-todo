@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_category, only: %i[new create show destroy edit update]
-  before_action :set_task, only: %i[show destroy edit update]
+  before_action :update_show_all
+  before_action :set_category
+  before_action :set_task, only: %i[show edit update destroy]
 
   def new
     @task = @category.tasks.new
@@ -19,12 +20,6 @@ class TasksController < ApplicationController
 
   def show; end
 
-  def destroy
-    @task.destroy
-
-    redirect_to categories_path, notice: 'Deleted task'
-  end
-
   def edit; end
 
   def update
@@ -36,7 +31,17 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    @task.destroy
+
+    redirect_to categories_path, notice: 'Deleted task'
+  end
+
   private
+
+  def update_show_all
+    @show_all = $show_all
+  end
 
   def task_params
     params.require(:task).permit(:name, :details, :deadline)
