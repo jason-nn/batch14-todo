@@ -205,7 +205,7 @@ pre {
   align-items: center;
 }
 
-.navbar-left div {
+.navbar-left-first-child {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -214,6 +214,18 @@ pre {
   font-size: 25px;
 
   margin-right: 30px;
+}
+
+.navlink-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.selected {
+  border-bottom: 2px solid #2eaadc;
 }
 
 .navbar-right {

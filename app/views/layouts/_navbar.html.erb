@@ -1,14 +1,27 @@
 <div class="navbar">
   <div class="navbar-left">
     <%= link_to root_path do %>
-      <div>
+      <div class="navbar-left-first-child">
         <%= image_tag("logo.svg") %>
         <span>Potion</span>
       </div>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to 'All tasks', root_path, class: 'gray-hover' %>
-      <%= link_to "Due today", today_path, class: 'gray-hover' %>
+      <% if @show_all %>
+        <div class="navlink-container selected">
+          <%= link_to 'All tasks', root_path, class: 'gray-hover' %>
+        </div>
+        <div class="navlink-container">
+          <%= link_to "Due today", today_path, class: 'gray-hover' %>
+        </div>
+      <% else %>
+        <div class="navlink-container">
+          <%= link_to 'All tasks', root_path, class: 'gray-hover' %>
+        </div>
+        <div class="navlink-container selected">
+          <%= link_to "Due today", today_path, class: 'gray-hover' %>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div class="navbar-right">
