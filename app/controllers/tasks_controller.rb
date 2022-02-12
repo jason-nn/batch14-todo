@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_category, only: %i[new create]
+  before_action :set_category, only: %i[new create show destroy]
+  before_action :set_task, only: %i[show destroy]
 
   def new
     @task = @category.tasks.new
@@ -16,6 +17,14 @@ class TasksController < ApplicationController
     end
   end
 
+  def show; end
+
+  def destroy
+    @task.destroy
+
+    redirect_to categories_path, notice: 'Deleted task'
+  end
+
   private
 
   def task_params
@@ -24,5 +33,9 @@ class TasksController < ApplicationController
 
   def set_category
     @category = current_user.categories.find(params[:category_id])
+  end
+
+  def set_task
+    @task = @category.tasks.find(params[:id])
   end
 end

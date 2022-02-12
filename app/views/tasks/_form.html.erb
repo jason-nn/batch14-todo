@@ -3,11 +3,11 @@
     <div class="back-link white-hover">􀰪</div>
   <% end %>
   <div class="box category-form">
-    <div class="header">
-      <%= header %>
-    </div>
     <div class="category-name">
       <%= category.name %>
+    </div>
+    <div class="header">
+      <%= header %>
     </div>
     <%= form_with model: [category, task] do |form| %>
       <div>

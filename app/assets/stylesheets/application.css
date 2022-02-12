@@ -78,7 +78,7 @@ select:focus {
 
 textarea {
   resize: none;
-  line-height: 200%;
+  line-height: 150%;
 }
 
 textarea::-webkit-scrollbar {
@@ -93,6 +93,19 @@ select {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+pre {
+  width: 100%;
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  font-family: inherit;
+  margin: none;
+
+  line-height: 150%;
 }
 
 * {
@@ -215,6 +228,7 @@ a {
 .gray-hover:hover {
   background-color: #f5f5f7;
   border-radius: 4px;
+  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
 }
 
 .white-hover {
@@ -224,6 +238,7 @@ a {
 .white-hover:hover {
   background-color: white;
   border-radius: 4px;
+  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
 }
 
 .toast {
@@ -454,6 +469,7 @@ a {
 
 .category-form {
   width: 40%;
+  position: relative;
 }
 
 .category-form input[type='submit'] {
@@ -489,13 +505,92 @@ a {
   font-family: SF-Pro-Display-Regular;
   font-size: 15px;
   cursor: pointer;
-  padding: 0.5em 0.5em;
+  padding: 0.5em;
 }
 
 .new-task-container {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .category-form .category-name {
   margin-bottom: 20px;
+}
+
+.tasks-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-container {
+  background-color: white;
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+
+  font-family: SF-Pro-Display-Regular;
+  font-size: 15px;
+  cursor: pointer;
+
+  display: flex;
+  gap: 1em;
+}
+
+.task-container:hover {
+  background-color: hsl(197, 71%, 52%, 5%);
+}
+
+.task-name {
+  flex-grow: 1;
+}
+
+.task-container .task-more {
+  color: white;
+}
+
+.task-container:hover .task-more {
+  color: #2eaadc;
+}
+
+.task-details-container {
+  font-family: SF-Pro-Display-Regular;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.task-deadline-container {
+  font-family: SF-Pro-Display-Regular;
+  font-size: 15px;
+}
+
+.task-deadline-container .category-name {
+  background-color: #f5f5f7;
+  margin-bottom: 0px;
+}
+
+.task-actions {
+  font-family: SF-Pro-Display-Regular;
+  font-size: 15px;
+
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  display: flex;
+}
+
+.task-actions a {
+  display: block;
+}
+
+.task-actions span {
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  display: block;
+}
+
+.task-actions span:hover {
+  background-color: #f5f5f7;
+  cursor: pointer;
 }

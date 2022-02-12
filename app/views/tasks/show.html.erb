@@ -1,0 +1,31 @@
+<div class="category-form-container">
+  <%= link_to categories_path do %>
+    <div class="back-link white-hover">􀰪</div>
+  <% end %>
+  <div class="box category-form">
+    <div class="category-name">
+      <%= @task.category.name %>
+    </div>
+    <div class="header">
+      <%= @task.name %>
+    </div>
+    <div class="task-details-container">
+      <pre><%= @task.details %></pre>
+    </div>
+    <div class="task-deadline-container">
+      <div class="category-name">
+        Due on <%= @task.deadline.in_time_zone(8).strftime("%B %d, %Y") %>
+      </div>
+    </div>
+    <div class="task-actions">
+      <%= link_to categories_path do %>
+        <span>􀈊</span>
+      <% end %>
+      <%= link_to category_task_path(@task.category_id, @task.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure you want to delete this task?" } do %>
+        <span>􀈑</span>
+      <% end %>
+    </div>
+  </div>
+</div>
