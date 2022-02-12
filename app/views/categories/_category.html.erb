@@ -1,4 +1,8 @@
-<% tasks = category.tasks %>
+<% if @show_all %>
+  <% tasks = category.tasks %>
+<% else %>
+  <% tasks = category.tasks.where(deadline: Date.today) %>
+<% end %>
 <div class="category-container">
   <div class="category-header">
     <div class="category-name">
