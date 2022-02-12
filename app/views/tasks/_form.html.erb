@@ -6,12 +6,15 @@
     <div class="header">
       <%= header %>
     </div>
-    <%= form_with model: [category, category.tasks.build] do |form| %>
+    <div class="category-name">
+      <%= category.name %>
+    </div>
+    <%= form_with model: [category, task] do |form| %>
       <div>
         <%= form.label :name %>
         <div class="input-container">
           <%= form.text_field :name, autofocus: true %>
-          <% category.errors.full_messages_for(:name).each do |message| %>
+          <% task.errors.full_messages_for(:name).each do |message| %>
             <div class="error">
               <%= message %>
             </div>
@@ -22,7 +25,7 @@
         <%= form.label :details %>
         <div class="input-container">
           <%= form.text_area :details, autofocus: false, size:"70x5" %>
-          <% category.errors.full_messages_for(:details).each do |message| %>
+          <% task.errors.full_messages_for(:details).each do |message| %>
             <div class="error">
               <%= message %>
             </div>
@@ -33,7 +36,7 @@
         <%= form.label :deadline %>
         <div class="input-container">
           <%= form.date_select :deadline, autofocus: false, order: [:month, :day, :year] %>
-          <% category.errors.full_messages_for(:deadline).each do |message| %>
+          <% task.errors.full_messages_for(:deadline).each do |message| %>
             <div class="error">
               <%= message %>
             </div>

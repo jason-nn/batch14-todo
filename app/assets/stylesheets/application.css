@@ -479,7 +479,9 @@ a {
   background-color: #4b96c0;
 }
 
-.category-form input[type='text'] {
+.category-form input[type='text'],
+.category-form textarea,
+.category-form select {
   margin-bottom: 0px;
 }
 
@@ -492,4 +494,8 @@ a {
 
 .new-task-container {
   margin-top: 15px;
+}
+
+.category-form .category-name {
+  margin-bottom: 20px;
 }
