@@ -30,14 +30,14 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def today
-    @categories = current_user.categories.order(:id)
-  end
-
   def destroy
     @category.destroy
 
     redirect_to categories_path, status: :see_other, notice: 'Deleted category'
+  end
+
+  def today
+    @categories = current_user.categories.order(:id)
   end
 
   private
