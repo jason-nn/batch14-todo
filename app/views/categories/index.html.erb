@@ -1,8 +1,11 @@
-<div class="categories-container">
-  <%= render @categories %>
-  <div class="new-category-button-container">
-    <%= link_to new_category_path do %>
-      <div class="button-blue new-category-button-container-button">􀅼</div>
-    <% end %>
+<div>
+  <div class="header">All tasks</div>
+  <div class="categories-container">
+    <%= render @categories %>
+    <div class="new-category-button-container">
+      <%= link_to new_category_path do %>
+        <div class="button-blue new-category-button-container-button">􀅼</div>
+      <% end %>
+    </div>
   </div>
 </div>
