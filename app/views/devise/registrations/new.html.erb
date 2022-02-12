@@ -1,14 +1,14 @@
 <div class="two-columns">
-  <div class="wobble">
+  <div>
     <%= image_tag("sign-up.png") %>
   </div>
-  <div class="slide-in-top">
+  <div>
     <div class="box devise-form">
       <div class="header">
         Sign up
       </div>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <div class="field">
+        <div>
           <%= f.label :email %>
           <div class="input-container">
             <%= f.email_field :email, autocomplete: "email", autofocus: true %>
@@ -19,7 +19,7 @@
             <% end %>
           </div>
         </div>
-        <div class="field">
+        <div>
           <%= f.label :password %>
           <% if @minimum_password_length %>
             <p><%= @minimum_password_length %> characters minimum</p>
@@ -33,7 +33,7 @@
             <% end %>
           </div>
         </div>
-        <div class="field">
+        <div>
           <%= f.label :password_confirmation %>
           <div class="input-container">
             <%= f.password_field :password_confirmation, autocomplete: "new-password" %>

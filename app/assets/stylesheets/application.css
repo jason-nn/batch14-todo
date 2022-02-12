@@ -197,6 +197,15 @@ a {
   border-radius: 4px;
 }
 
+.white-hover {
+  padding: 0.5em 1.5em;
+}
+
+.white-hover:hover {
+  background-color: white;
+  border-radius: 4px;
+}
+
 .toast {
   position: fixed;
   bottom: 20px;
@@ -389,6 +398,42 @@ a {
   border: none;
 }
 
+.input-container {
+  margin-bottom: 20px;
+}
+
+.error {
+  font-family: SF-Pro-Display-Regular;
+  font-size: 13px;
+  color: #e16259;
+  margin-top: 5px;
+}
+
+.category-form-container {
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 180px;
+
+  position: relative;
+}
+
+.back-link {
+  font-family: SF-Pro-Display-Regular;
+  font-size: 15px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.category-form {
+  width: 40%;
+}
+
 .category-form input[type='submit'] {
   background: none;
   border: none;
@@ -414,15 +459,4 @@ a {
 
 .category-form input[type='text'] {
   margin-bottom: 0px;
-}
-
-.input-container {
-  margin-bottom: 20px;
-}
-
-.error {
-  font-family: SF-Pro-Display-Regular;
-  font-size: 13px;
-  color: #e16259;
-  margin-top: 5px;
 }

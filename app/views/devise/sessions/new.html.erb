@@ -1,5 +1,5 @@
 <div class="two-columns">
-  <div class="wobble">
+  <div>
     <%= image_tag("log-in.png") %>
   </div>
   <div>
@@ -8,7 +8,7 @@
         Log in
       </div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
+        <div>
           <%= f.label :email %>
           <div class="input-container">
             <%= f.email_field :email, autocomplete: "email", autofocus: true %>
@@ -19,7 +19,7 @@
             <% end %>
           </div>
         </div>
-        <div class="field">
+        <div>
           <%= f.label :password %>
           <div class="input-container">
             <%= f.password_field :password, autocomplete: "current-password" %>

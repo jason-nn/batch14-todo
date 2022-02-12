@@ -1,18 +1,26 @@
-<div class="category-form">
-  <%= form_with model: category do |form| %>
-    <div>
-      <%= form.label :name %>
-      <div class="input-container">
-        <%= form.text_field :name, autofocus: true %>
-        <% category.errors.full_messages_for(:name).each do |message| %>
-          <div class="error">
-            <%= message %>
-          </div>
-        <% end %>
+<div class="category-form-container">
+  <div class="back-link">
+    <%= link_to '􀰪', categories_path, class: 'white-hover' %>
+  </div>
+  <div class="box category-form">
+    <div class="header">
+      <%= header %>
+    </div>
+    <%= form_with model: category do |form| %>
+      <div>
+        <%= form.label :name %>
+        <div class="input-container">
+          <%= form.text_field :name, autofocus: true %>
+          <% category.errors.full_messages_for(:name).each do |message| %>
+            <div class="error">
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div>
-      <%= form.submit %>
-    </div>
-  <% end %>
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
 </div>
