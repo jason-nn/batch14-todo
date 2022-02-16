@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Model Spec: Category', type: :model do
+RSpec.describe 'Category Model Spec', type: :model do
   before (:each) do
     @user = create(:user)
     @user_two = create(:user)
