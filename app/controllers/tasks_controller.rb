@@ -18,7 +18,7 @@ class TasksController < ApplicationController
         redirect_to today_path, notice: 'Created new task'
       end
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
@@ -31,7 +31,7 @@ class TasksController < ApplicationController
       redirect_to category_task_path(@task.category_id, @task.id),
                   notice: 'Updated category'
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 

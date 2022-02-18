@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
         redirect_to today_path, notice: 'Created new category'
       end
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
@@ -42,7 +42,7 @@ class CategoriesController < ApplicationController
         redirect_to today_path, notice: 'Updated category'
       end
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 
@@ -50,11 +50,9 @@ class CategoriesController < ApplicationController
     @category.destroy
 
     if @show_all
-      redirect_to categories_path,
-                  status: :see_other,
-                  notice: 'Deleted category'
+      redirect_to categories_path, notice: 'Deleted category'
     else
-      redirect_to today_path, status: :see_other, notice: 'Deleted category'
+      redirect_to today_path, notice: 'Deleted category'
     end
   end
 
