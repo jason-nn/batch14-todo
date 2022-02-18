@@ -19,16 +19,12 @@
       <% end %>
     </div>
   </div>
-  <% if tasks.length > 0 || true %>
-    <div class="tasks-container">
-      <% tasks.each do |task| %>
-        <%= render 'tasks/task', task: task %>
-      <% end %>
-    </div>
-  <% end %>
-  <div class="new-task-container">
+  <div class="tasks-container">
+    <% tasks.each do |task| %>
+      <%= render 'tasks/task', task: task %>
+    <% end %>
     <%= link_to new_category_task_path(category) do %>
-      <div class="white-hover new-task">
+      <div class="white-hover new-task static">
         􀅼 New task
       </div>
     <% end %>

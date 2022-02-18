@@ -517,11 +517,7 @@ pre {
   font-family: SF-Pro-Display-Regular;
   font-size: 15px;
   cursor: pointer;
-  padding: 0.5em;
-}
-
-.new-task-container {
-  margin-top: 10px;
+  padding: 1em 0.5em;
 }
 
 .category-form .category-name {
@@ -529,7 +525,7 @@ pre {
 }
 
 .tasks-container {
-  margin-top: 10px;
+  margin: 10px 0px;
   display: flex;
   flex-direction: column;
   gap: 10px;

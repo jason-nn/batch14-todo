@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
       group: {
         name: 'shared',
       },
+      filter: '.static',
       animation: 150,
     });
   });
