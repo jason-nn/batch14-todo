@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Task Model Spec', type: :model do
-  before (:each) do
+  before :each do
     @user = create(:user)
 
     @category_name = 'To Do'

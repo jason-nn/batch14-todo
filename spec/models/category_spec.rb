@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Category Model Spec', type: :model do
-  before (:each) do
+  before :each do
     @user = create(:user)
     @user_two = create(:user)
 

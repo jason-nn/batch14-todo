@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories Request Spec', type: :request do
-  before (:each) do
+  before :each do
     @user = create(:user)
     sign_in @user
 
