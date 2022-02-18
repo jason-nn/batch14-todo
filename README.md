@@ -2,12 +2,15 @@
 
 - [ ] write tests
 - [ ] add seed data
-- [ ] add to portfolio
 
 - [ ] add sortable tasks
 
-  - [ ] add api for sortable
   - [ ] add sortable in javascript
+  - [ ] add api for sortable
+
+- [ ] add readme
+
+- [ ] add to portfolio
 
 - [ ] refactor global variable to use cookies instead
 
