@@ -19,7 +19,7 @@
       <% end %>
     </div>
   </div>
-  <% if tasks.length > 0 %>
+  <% if tasks.length > 0 || true %>
     <div class="tasks-container">
       <% tasks.each do |task| %>
         <%= render 'tasks/task', task: task %>

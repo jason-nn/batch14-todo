@@ -7,7 +7,21 @@ import Rails from '@rails/ujs';
 import Turbolinks from 'turbolinks';
 import * as ActiveStorage from '@rails/activestorage';
 import 'channels';
+import Sortable from 'sortablejs';
 
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
+
+window.addEventListener('load', () => {
+  const taskContainers = document.querySelectorAll('.tasks-container');
+
+  taskContainers.forEach((taskContainer) => {
+    new Sortable(taskContainer, {
+      group: {
+        name: 'shared',
+      },
+      animation: 150,
+    });
+  });
+});

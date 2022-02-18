@@ -5,7 +5,7 @@
 
 - [ ] add sortable tasks
 
-  - [ ] add sortable in javascript
+  - [x] add sortable in javascript
   - [ ] add api for sortable
 
 - [ ] add readme
