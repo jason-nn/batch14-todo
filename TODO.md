@@ -1,14 +1,14 @@
 # To Do
 
-- [ ] write tests
+- [x] write tests
 - [ ] add seed data
+
+- [ ] add readme
 
 - [ ] add sortable tasks
 
   - [x] add sortable in javascript
   - [ ] add api for sortable
-
-- [ ] add readme
 
 - [ ] add to portfolio
 
