@@ -1,7 +1,7 @@
 # To Do
 
 - [x] write tests
-- [ ] add seed data
+- [x] add seed data
 
 - [ ] add readme
 
