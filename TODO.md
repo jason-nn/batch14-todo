@@ -3,7 +3,7 @@
 - [x] write tests
 - [x] add seed data
 
-- [ ] add readme
+- [x] add readme
 
 - [ ] add sortable tasks
 
