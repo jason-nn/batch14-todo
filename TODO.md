@@ -5,12 +5,12 @@
 
 - [x] add readme
 
+- [x] add to portfolio
+
 - [ ] add sortable tasks
 
   - [x] add sortable in javascript
   - [ ] add api for sortable
-
-- [ ] add to portfolio
 
 - [ ] refactor global variable to use cookies instead
 
